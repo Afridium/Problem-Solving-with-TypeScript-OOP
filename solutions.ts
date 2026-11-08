@@ -21,6 +21,7 @@ const processInput = (value: string | number | boolean): string | number => {
         }else{
             return "Inactive";
         }
+    }else{
+      throw new Error("Invalid input");  
     }
-    throw new Error("Invalid input");
 }
