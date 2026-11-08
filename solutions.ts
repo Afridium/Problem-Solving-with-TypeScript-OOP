@@ -31,5 +31,3 @@ type location = readonly [latitude: number, longitude: number, locationName: str
 const formatCoordinate = (value: location) => {
     return `Location: ${value[2]} (${value[0]}, ${value[1]})`;
 }
-
-console.log(formatCoordinate([23.81, 90.41, "Dhaka"]))
