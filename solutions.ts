@@ -31,3 +31,12 @@ type location = readonly [latitude: number, longitude: number, locationName: str
 const formatCoordinate = (value: location) => {
     return `Location: ${value[2]} (${value[0]}, ${value[1]})`;
 }
+
+//problem 4
+const concatenateArrays = <T>(...array: T[][]): T[] => {
+  let newArr: T[] = [];
+  for(let i = 0; i < array.length; i++){
+    newArr.push(...array[i]);
+  }
+  return newArr;
+}
