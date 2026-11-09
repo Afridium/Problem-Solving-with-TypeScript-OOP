@@ -62,3 +62,14 @@ const courses: Course[] = [
   { title: "Basic HTML", students: 45, isPublished: true },
   { title: "Next.js Pro", students: 85, isPublished: true }
 ];
+
+//fifth problem
+const pluckValues = <T, K extends keyof T>(inputs: T[], key: K): T[K][] => {
+    const newArr: T[K][] = inputs.map(user => user[key]);
+    return newArr;
+}
+const users = [
+  { id: 1, name: "Rakib", role: "Admin" },
+  { id: 2, name: "Sadia", role: "Editor" },
+  { id: 3, name: "Tariq", role: "Subscriber" }
+];
