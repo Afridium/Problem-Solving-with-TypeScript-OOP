@@ -24,15 +24,10 @@ I completed this assignment covering TypeScript concepts from Modules 1, 2, and 
 
 ## Blog Writing
 
-I completed writting technical blog posts on TypeScript topics:
+I completed writting 2 technical blog posts on TypeScript topics:
 
-- [Blog 01: type-vs-interface](./type-vs-interface.md)
-- [Blog 02: ts-hierarchy-any-unknown-never](./ts-hierarchy-any-unknown-never.md)
-- [Blog 03: type-narrowing](./type-narrowing.md)
-- [Blog 04: generics](./generics.md)
-- [Blog 05: access-modifiers](./access-modifiers.md)
-- [Blog 06: typescript-under-hood](./typescript-under-hood.md)
-- [Blog 07: combining-union-intersection](./combining-union-intersection.md)
+- [Blog 01: type-narrowing](./type-narrowing.md)
+- [Blog 02: access-modifiers](./access-modifiers.md)
 
 Each post is 150 to 300 words, saved as its own Markdown file, and includes a title, introduction, body paragraphs with code examples, and a conclusion.
 
