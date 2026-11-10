@@ -1,5 +1,3 @@
-//Problem 1
-
 const multiplyValue = (value: number, multiplier?:number) : number =>{
     if(multiplier === undefined){
         return value * 2;
@@ -8,7 +6,6 @@ const multiplyValue = (value: number, multiplier?:number) : number =>{
     }
 }
 
-//problem 2
 const processInput = (value: string | number | boolean): string | number => {
     
     if(typeof value === "string"){
@@ -26,13 +23,11 @@ const processInput = (value: string | number | boolean): string | number => {
     }
 }
 
-//problem 3
 type location = readonly [latitude: number, longitude: number, locationName: string]
 const formatCoordinate = (value: location) => {
     return `Location: ${value[2]} (${value[0]}, ${value[1]})`;
 }
 
-//problem 4
 const concatenateArrays = <T>(...array: T[][]): T[] => {
   let newArr: T[] = [];
   for(let i = 0; i < array.length; i++){
@@ -41,7 +36,6 @@ const concatenateArrays = <T>(...array: T[][]): T[] => {
   return newArr;
 }
 
-//problem 5
 interface Course {
     title: string;
     students: number;
@@ -56,20 +50,43 @@ const getPopularCourses = (courses: Course[], minStudents: number): Course[] => 
     }
     return popularCourses;
 }
-const courses: Course[] = [
-  { title: "TypeScript Mastery", students: 120, isPublished: true },
-  { title: "Draft Course", students: 200, isPublished: false },
-  { title: "Basic HTML", students: 45, isPublished: true },
-  { title: "Next.js Pro", students: 85, isPublished: true }
-];
 
-//fifth problem
 const pluckValues = <T, K extends keyof T>(inputs: T[], key: K): T[K][] => {
     const newArr: T[K][] = inputs.map(user => user[key]);
     return newArr;
 }
-const users = [
-  { id: 1, name: "Rakib", role: "Admin" },
-  { id: 2, name: "Sadia", role: "Editor" },
-  { id: 3, name: "Tariq", role: "Subscriber" }
-];
+
+class Employee{
+    protected name: string;
+    private baseSalary: number;
+    constructor(name: string, baseSalary: number){
+        this.name = name;
+        this.baseSalary = baseSalary;
+    }
+    getDetails():string{
+        return `Employee: ${this.name}, Base Salary: ${this.baseSalary}`;
+    }
+}
+class Manager extends Employee{
+    private department: string;
+    constructor(name: string, baseSalary: number, department: string){
+        super(name,baseSalary);
+        this.department = department;
+    }
+    getRoleInfo():string{
+        return `Manager of ${this.department}: ${this.name}`;
+    }
+}
+
+const validateAgeAsync = async(age: number): Promise<string> => {    
+    return new Promise((resolve, reject) => {
+      if(age >= 18){
+        setTimeout(() => {
+            resolve("Access Granted")
+        }, 1000)
+    }else{
+        reject(new Error("Access Denied: Must be 18 or older"))
+    }  
+    });
+}
+
